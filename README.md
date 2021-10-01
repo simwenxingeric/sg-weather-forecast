@@ -12,5 +12,5 @@ A lightweight and simple nodeJS website for displaying 2-hourly weather forecast
 1. Clone the git project with Git. Run `git clone https://github.com/simwenxingeric/sg-weather-forecast.git`
 2. Run `node main.js` to start localhost
 
-# Author
+## Author
 I am Sim Wen Xing Eric, a fresh graduate from a local Polytechnic in Singapore.
