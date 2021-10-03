@@ -6,7 +6,6 @@ $(function(){
     .done((data) => {
         if (data || Object.keys(data['area_metadata']).length === 0 || Object.keys(data['items']).length === 0) {
             $('#location-menu').append(`<option value="-">-</option>`)
-            console.error("API is down!")
         } else {
             for (let i = 0; i < data['area_metadata'].length; ++i) {
                 $('#location-menu').append(`<option value="${data['area_metadata'][i]['name']}">${data['area_metadata'][i]['name']}</option>`)
