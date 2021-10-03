@@ -6,7 +6,7 @@ $(function(){
     .done((data) => {
         let forecast = ""
 
-        if (data || Object.keys(data['area_metadata']).length === 0 || Object.keys(data['items']).length === 0) {
+        if (!data || Object.keys(data['area_metadata']).length === 0 || Object.keys(data['items']).length === 0) {
             $('#location-menu').append(`<option value="-">-</option>`)
             forecast = "No forecast found."
             $("#forecast").text(`${forecast}`)
@@ -31,6 +31,9 @@ $(function(){
                 $("#forecast").text(`${forecast}`)
             })   
         }
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.log(errorThrown)
     })
 
 })
